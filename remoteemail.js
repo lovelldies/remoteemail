@@ -14,7 +14,7 @@ $(document).ready(function(){
     $inputs.prop("disabled", true);
 
     request = $.ajax({
-      url: 'http://sandbox.lovelldsouza.com/remoteemail.php',
+      url: 'http://sandbox.lovelldsouza.com/remoteemail/remoteemail.php',
       cache: false,
       crossDomain: true,
       type: 'get',
