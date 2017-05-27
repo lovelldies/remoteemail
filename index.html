@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remote form submission using jQuery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+</head>
+<body>
+<div class="row">
+  <div class="col-md-12">
+    <form id="email-form">
+      <div class="col-md-12 form-group">
+        <label for="name">Name *</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required="true">
+      </div>
+      <div class="col-md-6 col-sm-6 form-group">
+        <label for="email">Email *</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your email address" required="true">
+      </div>
+      <div class="col-md-6 col-sm-6 form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your phone number">
+      </div>
+      <div class="col-md-12 form-group">
+        <label for="email">Message *</label>
+        <textarea class="form-control" rows="4" name="message" id="message" placeholder="Please leave us a message." required="true"></textarea>
+      </div>
+      <div class="col-md-12">
+        <p class="text-muted"><strong>*</strong> Required fields.</p>
+      </div>
+      <div class="col-md-12 form-group">
+        <center>
+          <div id="response"></div>
+          <input type="submit" value="Submit" class="btn btn-primary btn-lg" />
+          <input type="reset" value="Reset" class="btn btn-lg" />
+        </center>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="remoteemail.min.js"></script>
+</body>
+</html>
