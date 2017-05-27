@@ -1,6 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 
+$sendTo = htmlspecialchars(trim($_GET["sendto"]));
 $name = htmlspecialchars(trim($_GET["name"]));
 $email = htmlspecialchars(trim($_GET["email"]));
 $message = htmlspecialchars(trim($_GET["message"]));
@@ -33,7 +34,7 @@ if (!empty($errors)) {
   $form_data["success"] = true;
   $txt = "Message: ".$message.
      "\r\n"."Phone: ".$phone;
-  $to = "lovelldies@gmail.com";
+  $to = $sendTo;
   $subject = "You got mail!";
 
   $headers = "\r\n"."From: ".$name." <".$email.">".
