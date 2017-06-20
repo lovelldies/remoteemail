@@ -32,13 +32,14 @@ if (!empty($errors)) {
  $form_data["errors"]  = $errors;
 } else {
   $form_data["success"] = true;
-  $txt = "Message: ".$message.
-     "\r\n"."Phone: ".$phone;
+  $txt = "From: ".$name." <".$email.">"."\n".
+         "Message: ".$message."\n".
+         "Phone: ".$phone;
   $to = $sendTo;
   $subject = "You got mail!";
 
-  $headers = "\r\n"."From: ".$name." <".$email.">".
-         "\r\n"."Reply-To: ".$email;
+  $headers = "From: Email Bot <noreply@greatphotos.in>"."\r\n".
+             "Reply-To: $email"."\r\n" ;
 
   mail($to, $subject, $txt, $headers);
   $form_data["response"] = "<p>Email sent!</p>";

@@ -1,2 +1,2 @@
 # remoteemail
-Cross-domain email submission. Simple code to submit froms on Github Pages, using my sandbox server.
+Very basic code that submits forms from static pages, via a cross domain ajax call.
